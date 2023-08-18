@@ -22,7 +22,7 @@ const Main = () => {
           </div>
         </div>
         <BottomDivider />
-        <div className="md:max-w-6xl md:m-auto md:text-lg md:py-40 py-20">
+        <div className="md:max-w-6xl md:m-auto md:text-lg md:py-28 py-20">
           <About />
         </div>
         <TopDivider />
