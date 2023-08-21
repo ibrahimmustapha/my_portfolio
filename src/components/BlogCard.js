@@ -18,8 +18,8 @@ const BlogCard = (props) => {
           <div className="text-2xl font-black text-ellipsis line-clamp-2">
             {props.title}
           </div>
-          <div className="line-clamp-4">
-            <div className="py-3 text-slate-400 ">{props.preview}</div>
+          <div className="py-3">
+            <div className="line-clamp-4 text-slate-400 ">{props.preview}</div>
           </div>
           <Link to={`https://codewithibrahim.hashnode.dev/${props.readMe}`}>
             <div className=" text-left text-blue-600">Read more</div>
