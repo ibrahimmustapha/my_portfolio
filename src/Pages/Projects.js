@@ -3,7 +3,7 @@
 const projectsData = [
   {
     id: 1,
-    title: "Project XX",
+    title: "Linkstor",
     details: "Seamlessly manage users with SSO and domain capture",
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
@@ -11,7 +11,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Project XX",
+    title: "Todo List",
     details: "Seamlessly manage users with SSO and domain capture",
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
@@ -19,7 +19,31 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Project XX",
+    title: "Weather App",
+    details: "Seamlessly manage users with SSO and domain capture",
+    image:
+      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
+    tech: ["React", "Tailwind CSS"],
+  },
+  {
+    id: 4,
+    title: "Linkstor",
+    details: "Seamlessly manage users with SSO and domain capture",
+    image:
+      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
+    tech: ["React", "Bootstrap 4"],
+  },
+  {
+    id: 5,
+    title: "Todo List",
+    details: "Seamlessly manage users with SSO and domain capture",
+    image:
+      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
+    tech: ["Angular", "CSS"],
+  },
+  {
+    id: 6,
+    title: "Weather App",
     details: "Seamlessly manage users with SSO and domain capture",
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
@@ -36,7 +60,7 @@ const Projects = () => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 g gap-10">
         {projectsData.map((project) => (
-          <div className="shadow-lg rounded-lg bg-[#212529]" key={project.id}>
+          <div className="shadow-lg rounded-lg bg-[#343a40]" key={project.id}>
             <img src={project.image} alt="project_image" />
             <div className="p-5">
               <div className="pb-3 text-xl font-black">{project.title}</div>
