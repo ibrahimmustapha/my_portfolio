@@ -15,13 +15,15 @@ const BlogCard = (props) => {
           />
         </div>
         <div>
-          <div className="pb-3 text-2xl font-black text-ellipsis overflow-hidden">
+          <div className="text-2xl font-black text-ellipsis line-clamp-2">
             {props.title}
           </div>
-          <div className="py-2 line-clamp-3 text-slate-400">
-            {props.preview}
+          <div className="line-clamp-4">
+            <div className="py-3 text-slate-400 ">{props.preview}</div>
           </div>
-          <div className=" text-left text-blue-600">Read more</div>
+          <Link to={`https://codewithibrahim.hashnode.dev/${props.readMe}`}>
+            <div className=" text-left text-blue-600">Read more</div>
+          </Link>
         </div>
       </div>
     </Link>

@@ -1,4 +1,4 @@
-// import "../styles/Projects.scss";
+import ProjectCard from "../components/ProjectCard";
 
 const projectsData = [
   {
@@ -60,20 +60,18 @@ const Projects = () => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 g gap-10">
         {projectsData.map((project) => (
-          <div className="shadow-lg rounded-lg bg-[#343a40]" key={project.id}>
-            <img src={project.image} alt="project_image" />
-            <div className="p-5">
-              <div className="pb-3 text-xl font-black">{project.title}</div>
-              <div className="pb-3">{project.details}</div>
-              <div className="flex gap-3">
-                {project.tech.map((tech) => (
-                  <div className="text-white bg-[#2f2f2f] rounded-lg shadow-lg shadow-black-900 p-1 pl-4 pr-4 hover:animate-pulse">
-                    {tech}
-                  </div>
-                ))}
+          <ProjectCard
+            id={project.id}
+            title={project.title}
+            details={project.details}
+            image={project.image}
+          >
+            {project.tech.map((tech) => (
+              <div className="text-white bg-[#2f2f2f] rounded-lg shadow-lg shadow-black-900 p-1 pl-4 pr-4 hover:animate-pulse">
+                {tech}
               </div>
-            </div>
-          </div>
+            ))}
+          </ProjectCard>
         ))}
       </div>
     </div>

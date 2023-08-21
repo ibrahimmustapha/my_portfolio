@@ -21,7 +21,7 @@ const Blog = () => {
 
   useEffect(() => {
     fetchPosts();
-  }, []);
+  });
 
   const fetchPosts = async () => {
     const token = "a584ae6b-3b8b-4ced-acd1-fe175b98c3d3";
@@ -47,6 +47,7 @@ const Blog = () => {
             image={post.coverImage}
             title={post.title}
             preview={post.brief}
+            readMe={post.slug}
           />
         ))}
       </div>

@@ -32,7 +32,7 @@ const Main = () => {
           <About />
         </div>
         <TopDivider />
-        <div className="bg-[#343a40]" id="Projects">
+        <div className="bg-[#343a40]" id="Skills">
           <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
             <Skills />
           </div>
@@ -44,8 +44,8 @@ const Main = () => {
           </div>
         </div>
         <TopDivider />
-        <div className="bg-[#343a40]" id="Projects">
-          <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
+        <div className="bg-[#343a40]" id="Blog">
+          <div className="md:max-w-5xl md:m-auto py-20 md:pt-16 md:pb-10">
             <Blog />
           </div>
         </div>
