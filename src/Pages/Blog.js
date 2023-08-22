@@ -43,7 +43,7 @@ const Blog = () => {
 
   if (loading)
     return (
-      <div className=" max-w-4xl m-auto">
+      <div className=" max-w-4xl m-auto px-5">
         <div className="mb-5 text-xl font-black">BLOGS</div>
         <BlogSkeletonLoader />
         <BlogSkeletonLoader />
