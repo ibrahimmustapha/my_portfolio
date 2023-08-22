@@ -7,6 +7,7 @@ import Projects from "../Pages/Projects";
 import Skills from "../Pages/Skills";
 import BottomDivider from "./BottomDivider";
 import Navbar from "./Nav";
+import RevealOnScroll from "./RevealOnScroll";
 import TopDivider from "./TopDivider";
 
 const Main = () => {
@@ -26,36 +27,46 @@ const Main = () => {
         </div>
         <BottomDivider />
         <div
-          className="md:max-w-6xl md:m-auto md:text-lg md:py-28 py-20"
+          className="md:max-w-6xl md:m-auto md:text-lg md:py-20 py-20"
           id="About"
         >
-          <About />
+          <RevealOnScroll>
+            <About />
+          </RevealOnScroll>
         </div>
         <TopDivider />
         <div className="bg-[#343a40]" id="Skills">
-          <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Skills />
-          </div>
+          <RevealOnScroll>
+            <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
+              <Skills />
+            </div>
+          </RevealOnScroll>
         </div>
         <BottomDivider />
         <div className="" id="Projects">
-          <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Projects />
-          </div>
+          <RevealOnScroll>
+            <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
+              <Projects />
+            </div>
+          </RevealOnScroll>
         </div>
         <TopDivider />
         <div className="bg-[#343a40]" id="Blog">
-          <div className="md:max-w-5xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Blog />
-          </div>
+          <RevealOnScroll>
+            <div className="md:max-w-5xl md:m-auto py-20 md:pt-16 md:pb-10">
+              <Blog />
+            </div>
+          </RevealOnScroll>
         </div>
         <BottomDivider />
-        <div
-          className="md:max-w-6xl md:m-auto md:text-lg px-5 py-20"
-          id="Contact"
-        >
-          <Contact />
-        </div>
+        <RevealOnScroll>
+          <div
+            className="md:max-w-6xl md:m-auto md:text-lg px-5 py-20"
+            id="Contact"
+          >
+            <Contact />
+          </div>
+        </RevealOnScroll>
         <TopDivider />
         <div className="bg-[#343a40] text-white">
           <div className="max-w-5xl m-auto">
