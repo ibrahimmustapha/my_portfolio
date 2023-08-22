@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import BlogCard from "../components/BlogCard";
+import BlogSkeletonLoader from "../components/BlogSkeletonLoader";
 
 const Blog = () => {
+  const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
   const query = `
@@ -36,7 +38,18 @@ const Blog = () => {
     const data = await response.json();
     console.log(data);
     setPosts(data.data.user.publication.posts);
+    setLoading(false);
   };
+
+  if (loading)
+    return (
+      <div className=" max-w-4xl m-auto">
+        <div className="mb-5 text-xl font-black">BLOGS</div>
+        <BlogSkeletonLoader />
+        <BlogSkeletonLoader />
+        <BlogSkeletonLoader />
+      </div>
+    );
   return (
     <div className="px-5">
       <div className="mb-5 text-xl font-black">BLOGS</div>
