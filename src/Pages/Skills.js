@@ -14,9 +14,9 @@ const Skills = () => {
   return (
     <div className="py-16 px-5">
       <div className="mb-5 text-xl font-black">SKILLS</div>
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid sm:grid-cols-3 md:grid-cols-4 sm:gap-5 md:gap-10">
         {techs.map((tech) => (
-          <div className="text-3xl font-black py-4 my-3 w-full border-b-2 hover:animate-pulse hover:text-green-100">
+          <div className="text-3xl font-black py-4 my-3 w-full md:w-48 border-b-2 hover:animate-pulse hover:text-green-100">
             {tech}
           </div>
         ))}
