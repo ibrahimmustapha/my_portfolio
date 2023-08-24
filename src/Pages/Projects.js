@@ -34,7 +34,7 @@ const projectsData = [
     title: "Covid Pro Tracka",
     details: "Seamlessly manage users with SSO and domain capture",
     image: CovidImage,
-    tech: ["React", "Bootstrap 4"],
+    tech: ["Angular", "Tailwind CSS"],
     link: "https://covid-19-tracka.netlify.app",
   },
   {
@@ -43,7 +43,7 @@ const projectsData = [
     details: "Seamlessly manage users with SSO and domain capture",
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
-    tech: ["Angular", "CSS"],
+    tech: ["Vue", "CSS"],
     link: "",
   },
   {
