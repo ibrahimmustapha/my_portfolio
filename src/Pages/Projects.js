@@ -1,4 +1,6 @@
 import ProjectCard from "../components/ProjectCard";
+import WeatherImage from "../assets/weather-app.png";
+import CovidImage from "../assets/covid-tracker.png";
 
 const projectsData = [
   {
@@ -8,6 +10,7 @@ const projectsData = [
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
     tech: ["React", "Bootstrap 4"],
+    link: "",
   },
   {
     id: 2,
@@ -16,22 +19,23 @@ const projectsData = [
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
     tech: ["Angular", "CSS"],
+    link: "",
   },
   {
     id: 3,
     title: "Weather App",
     details: "Seamlessly manage users with SSO and domain capture",
-    image:
-      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
-    tech: ["React", "Tailwind CSS"],
+    image: WeatherImage,
+    tech: ["Angular", "Tailwind CSS"],
+    link: "https://shortcaster.netlify.app/",
   },
   {
     id: 4,
-    title: "Linkstor",
+    title: "Covid Pro Tracka",
     details: "Seamlessly manage users with SSO and domain capture",
-    image:
-      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
+    image: CovidImage,
     tech: ["React", "Bootstrap 4"],
+    link: "https://covid-19-tracka.netlify.app",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const projectsData = [
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
     tech: ["Angular", "CSS"],
+    link: "",
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ const projectsData = [
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
     tech: ["React", "Tailwind CSS"],
+    link: "",
   },
 ];
 
@@ -65,6 +71,7 @@ const Projects = () => {
             title={project.title}
             details={project.details}
             image={project.image}
+            link={project.link}
           >
             {project.tech.map((tech) => (
               <div className="text-white bg-[#2f2f2f] rounded-lg shadow-lg shadow-black-900 p-1 pl-4 pr-4 hover:animate-pulse">
