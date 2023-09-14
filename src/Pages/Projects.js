@@ -2,6 +2,7 @@ import ProjectCard from "../components/ProjectCard";
 import WeatherImage from "../assets/weather-app.png";
 import CovidImage from "../assets/covid-tracker.png";
 import FramamImage from "../assets/framam.jpg";
+import TwitterClone from "../assets/twitterclone.png";
 
 const projectsData = [
   {
@@ -48,12 +49,11 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Twiter Clone",
+    title: "TwitterX Clone",
     details: "Seamlessly manage users with SSO and domain capture with SSO and domain capture.",
-    image:
-      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
-    tech: ["React", "Express"],
-    link: "",
+    image: TwitterClone,
+        tech: ["React", "Firebase"],
+    link: "https://twitterxclone.netlify.app/",
   },
 ];
 

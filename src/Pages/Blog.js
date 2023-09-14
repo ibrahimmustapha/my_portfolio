@@ -31,7 +31,7 @@ const Blog = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
       },
       body: JSON.stringify({ query }),
     });
