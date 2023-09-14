@@ -26,7 +26,6 @@ const Blog = () => {
   });
 
   const fetchPosts = async () => {
-    const token = "a584ae6b-3b8b-4ced-acd1-fe175b98c3d3";
     const response = await fetch("https://api.hashnode.com", {
       method: "POST",
       headers: {
