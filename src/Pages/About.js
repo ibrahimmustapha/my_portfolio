@@ -14,11 +14,15 @@ const About = () => {
           A Ghanaian Based Software Developer
         </div>
         <div>
-          Hello I’m Ibrahim, a passionate software developer with a strong
-          foundation in cutting edge technologies including Java, JavaScript,
-          React, Spring Boot, and Node Js. While my journey primarily has been
-          as a freelance developer, I bring a wealth of hands-on knowledge and a
-          determination to learn and improve on the job.
+          As a recent college graduate with a strong foundation in programming
+          and a self-driven journey of continuous learning, I bring a versatile
+          skill set to the world of software development. Proficient in a wide
+          range of technologies, including React, Angular, Node.js (Express),
+          Java, and JavaScript, I am passionate about crafting robust and
+          usercentric web applications. With a
+          commitment to delivering high-quality code and a strong work ethic, I
+          am eager to contribute my skills to create innovative and impactful
+          software solutions.
         </div>
       </div>
     </div>
