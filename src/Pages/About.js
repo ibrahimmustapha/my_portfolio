@@ -1,4 +1,4 @@
-import illustration from '../assets/lust1.svg';
+import illustration from "../assets/lust1.svg";
 
 const About = () => {
   return (
@@ -14,11 +14,11 @@ const About = () => {
           A Ghanaian Based Software Developer
         </div>
         <div>
-          Ibrahim believes in lifelong learning and understands the importance
-          of staying updated in a rapidly evolving industry. They actively seek
-          out opportunities to enhance their skills through online courses,
-          tutorials, and participation in coding communities. Ibrahim is
-          committed to professional growth and staying ahead of the curve.
+          Hello I’m Ibrahim, a passionate software developer with a strong
+          foundation in cutting edge technologies including Java, JavaScript,
+          React, Spring Boot, and Node Js. While my journey primarily has been
+          as a freelance developer, I bring a wealth of hands-on knowledge and a
+          determination to learn and improve on the job.
         </div>
       </div>
     </div>
