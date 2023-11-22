@@ -7,18 +7,24 @@ const Blog = () => {
   const [posts, setPosts] = useState([]);
 
   const query = `
-    query {
-        user(username: "codewithibrahim") {
-          publication {
-            posts(page: 0) {
-              title
-              brief
-              slug
-              coverImage
+  query {
+    publication(host: "codewithibrahim.hashnode.dev") {
+      isTeam
+      title
+      posts(first: 3) {
+        edges {
+          node {
+            coverImage {
+              url
             }
+            title
+            brief
+            url
           }
         }
       }
+    }
+  }
     `;
 
   useEffect(() => {
@@ -29,14 +35,15 @@ const Blog = () => {
     const response = await fetch("https://api.hashnode.com", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/queryjson",
         Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
       },
       body: JSON.stringify({ query }),
     });
     const data = await response.json();
     console.log(data);
-    setPosts(data.data.user.publication.posts);
+    setPosts(data.data.publication.posts);
+    console.log(posts)
     setLoading(false);
   };
 
@@ -55,11 +62,11 @@ const Blog = () => {
       <div>
         {posts.map((post) => (
           <BlogCard
-            link={post.slug}
-            image={post.coverImage}
+            link={post.url}
+            image={post.coverImage?.url}
             title={post.title}
             preview={post.brief}
-            readMe={post.slug}
+            readMe={post.url}
           />
         ))}
       </div>
