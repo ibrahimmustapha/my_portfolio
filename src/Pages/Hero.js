@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rightArrow from "../assets/right-arrow.svg";
-import image from "../assets/pic5.jpeg";
+import image from "../assets/safari-pinned-tab.svg";
 
 import {
   faDiscord,
