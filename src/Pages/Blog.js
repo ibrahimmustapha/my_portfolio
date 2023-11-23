@@ -66,7 +66,7 @@ const Blog = () => {
             image={post.node.coverImage?.url}
             title={post.node?.title}
             preview={post.node?.brief}
-            readMe={post.node?.url}
+            readMe={post.node?.slug}
           />
         ))}
       </div>

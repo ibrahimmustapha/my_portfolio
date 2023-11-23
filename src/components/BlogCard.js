@@ -21,7 +21,7 @@ const BlogCard = (props) => {
           <div className="py-3">
             <div className="line-clamp-4 text-slate-400 ">{props.preview}</div>
           </div>
-          <Link to={`https://codewithibrahim.hashnode.dev/${props.readMe}`}>
+          <Link to={`https://codewithibrahim.hashnode.dev/${props.readMe}`} target="_blank">
             <div className=" text-left text-blue-600">Read more</div>
           </Link>
         </div>
