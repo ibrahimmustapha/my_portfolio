@@ -4,7 +4,7 @@ const BlogCard = (props) => {
   return (
     <Link
       to={`https://codewithibrahim.hashnode.dev/${props.link}`}
-      target="_blank"
+      target="_blank" key={props.postKey}
     >
       <div className="md:grid md:grid-cols-2 md:gap-8 md:items-start bg-[#212529] shadow-xl rounded-2xl md:p-4 p-3 mb-10 cursor-pointer">
         <div>

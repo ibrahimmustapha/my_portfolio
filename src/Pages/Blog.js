@@ -20,6 +20,7 @@ const Blog = () => {
             title
             brief
             url
+            slug
           }
         }
       }
@@ -32,18 +33,16 @@ const Blog = () => {
   });
 
   const fetchPosts = async () => {
-    const response = await fetch("https://api.hashnode.com", {
+    const response = await fetch("https://gql.hashnode.com", {
       method: "POST",
       headers: {
-        "Content-Type": "application/queryjson",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
       },
       body: JSON.stringify({ query }),
     });
     const data = await response.json();
-    console.log(data);
-    setPosts(data.data.publication.posts);
-    console.log(posts)
+    setPosts(data.data.publication.posts.edges);
     setLoading(false);
   };
 
@@ -62,11 +61,12 @@ const Blog = () => {
       <div>
         {posts.map((post) => (
           <BlogCard
-            link={post.url}
-            image={post.coverImage?.url}
-            title={post.title}
-            preview={post.brief}
-            readMe={post.url}
+            postKey={post.node?.slug}
+            link={post.node?.url}
+            image={post.node.coverImage?.url}
+            title={post.node?.title}
+            preview={post.node?.brief}
+            readMe={post.node?.url}
           />
         ))}
       </div>
