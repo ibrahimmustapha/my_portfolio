@@ -3,13 +3,13 @@ import arrow from "../../src/assets/right-arrow.svg";
 import logo from "../../src/assets/pic5.jpeg";
 import moon from "../../src/assets/icons8-moon-50.png";
 import sun from "../../src/assets/icons8-sun-50.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const links = ["Home", "About", "Skills", "Blog", "Projects", "Contact"];
 
 const Navbar = (props) => {
   return (
-    <div style={{ color: props.textColor }}
+    <div
+      style={{ color: props.textColor }}
       className={`flex justify-between items-center py-5 px-5 bg-[${props.navColor}] text-[${props.linkColor}]`}
     >
       <div className="flex gap-4 items-center text-xl font-black">
@@ -20,11 +20,13 @@ const Navbar = (props) => {
           alt="ibrahim_photo"
         />
       </div>
-      <img
-        src={logo}
-        className="animate-bounce rounded-full w-30 h-8 md:hidden"
-        alt="ibrahim_photo"
-      />
+      <button className="md:hidden" onClick={props.toggleTheme}>
+        {props.isDarkMode ? (
+          <img className=" w-7 h-7 text-white" src={sun} alt="sun-light" />
+        ) : (
+          <img className=" w-7 h-7" src={moon} alt="moon-dark" />
+        )}
+      </button>
       <ul className="md:flex gap-5 hidden">
         {links.map((link) => (
           <li className={`nav_link hover:text-yellow-600`}>
@@ -39,17 +41,9 @@ const Navbar = (props) => {
         <li className="nav_link hover:text-yellow-600">
           <button onClick={props.toggleTheme}>
             {props.isDarkMode ? (
-              <img
-                className=" w-7 h-7 text-white"
-                src={sun}
-                alt="sun-light"
-              />
+              <img className=" w-7 h-7 text-white" src={sun} alt="sun-light" />
             ) : (
-              <img
-                className=" w-7 h-7"
-                src={moon}
-                alt="moon-dark"
-              />
+              <img className=" w-7 h-7" src={moon} alt="moon-dark" />
             )}
           </button>
         </li>
