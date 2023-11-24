@@ -31,7 +31,7 @@ const Main = () => {
       <div>
         <div className={`bg-[${theme.dividerColor}]`}>
           <div className="max-w-5xl m-auto pb-16">
-            <Hero textColor={theme.textColor} iconColor={theme.textColor} />
+            <Hero bgColor={theme.dividerColor} textColor={theme.textColor} iconColor={theme.textColor} />
           </div>
         </div>
         <BottomDivider bottomDivColor={theme.dividerColor} />
@@ -44,7 +44,7 @@ const Main = () => {
         <TopDivider topDivColor={theme.dividerColor} />
         <div className={`bg-[${theme.dividerColor}] text-[${theme.textColor}]`} id="Skills">
           <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Skills />
+            <Skills bgColor={theme.dividerColor} />
           </div>
         </div>
         <BottomDivider bottomDivColor={theme.dividerColor} />
@@ -56,7 +56,7 @@ const Main = () => {
         <TopDivider topDivColor={theme.dividerColor} />
         <div className={`bg-[${theme.dividerColor}]`} id="Blog">
           <div className="md:max-w-5xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Blog blogBgColor={theme.bgColor} textColor={theme.textColor}/>
+            <Blog bgColor={theme.dividerColor} blogBgColor={theme.bgColor} textColor={theme.textColor}/>
           </div>
         </div>
         <BottomDivider bottomDivColor={theme.dividerColor} />
@@ -69,7 +69,7 @@ const Main = () => {
         <TopDivider topDivColor={theme.dividerColor} />
         <div className={`bg-[${theme.dividerColor}]`}>
           <div className="max-w-5xl m-auto">
-            <Footer />
+            <Footer bgColor={theme.dividerColor} />
           </div>
         </div>
       </div>

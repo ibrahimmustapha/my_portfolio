@@ -59,7 +59,7 @@ const Blog = (props) => {
       </div>
     );
   return (
-    <div className="px-5" style={{ color: props.textColor }}>
+    <div className="px-5" style={{ color: props.textColor, background: props.bgColor }}>
       <div className="mb-5 text-xl font-black">BLOGS</div>
       <div>
         {posts.map((post) => (

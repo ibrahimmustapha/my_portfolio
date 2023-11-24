@@ -18,7 +18,7 @@ const Hero = (props) => {
     { icon: faDiscord, name: "Discord", link: "https://discord.com/channels/1116314427902414948/1116314428418293822" },
   ];
   return (
-    <div style={{ color: props.textColor }} className={`justify-center items-center text-center px-5 md:max-w-3xl md:m-auto`}>
+    <div style={{ color: props.textColor, background: props.bgColor }} className={`justify-center items-center text-center px-5 md:max-w-3xl md:m-auto`}>
       <div className="">
         <div className="flex justify-center pb-6">
           <img
