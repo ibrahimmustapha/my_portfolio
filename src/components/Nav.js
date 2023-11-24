@@ -4,9 +4,9 @@ import logo from "../../src/assets/pic5.jpeg";
 
 const links = ["Home", "About", "Skills", "Blog", "Projects", "Contact"];
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <div className="flex justify-between items-center py-5 px-5">
+    <div className={`flex justify-between items-center py-5 px-5 bg-[${props.navColor}]`}>
       <div className="flex gap-4 items-center text-xl font-black">
         <div>Ibrahim.code</div>
         <img
@@ -31,6 +31,11 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+        <li className="nav_link hover:text-yellow-600">
+        <button onClick={props.toggleTheme}>
+        Toggle Theme: {props.isDarkMode ? 'Dark' : 'Light'}
+      </button>
+        </li>
       </ul>
     </div>
   );

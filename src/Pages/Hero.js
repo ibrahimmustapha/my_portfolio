@@ -46,7 +46,7 @@ const Hero = () => {
             <Link to={icon.link} target="_blank" className="flex flex-wrap items-center gap-2 rounded-md">
               <FontAwesomeIcon
                 icon={icon.icon}
-                color="#e9ecef"
+                color="#2D2727"
                 className="md:text-3xl text-2xl cursor-pointer hover:text-4xl hover:text-blue-700"
               />
             </Link>

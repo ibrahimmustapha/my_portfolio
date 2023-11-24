@@ -7,7 +7,7 @@ const Blog = () => {
   const [posts, setPosts] = useState([]);
 
   const query = `
-  query {
+  {
     publication(host: "codewithibrahim.hashnode.dev") {
       isTeam
       title
@@ -21,6 +21,9 @@ const Blog = () => {
             brief
             url
             slug
+            content {
+              markdown
+            }
           }
         }
       }
@@ -67,6 +70,7 @@ const Blog = () => {
             title={post.node?.title}
             preview={post.node?.brief}
             readMe={post.node?.slug}
+            // content={post.node?.content?.markdown}
           />
         ))}
       </div>

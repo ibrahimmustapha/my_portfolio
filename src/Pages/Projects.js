@@ -63,7 +63,7 @@ const projectsData = [
   },
 ];
 
-const Projects = () => {
+const Projects = (props) => {
   return (
     <div className="md:pb-32 px-5">
       <div className="mb-5 text-xl font-black">PERSONAL PROJECTS</div>
@@ -73,6 +73,7 @@ const Projects = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 g gap-10">
         {projectsData.map((project) => (
           <ProjectCard
+            projectCardBgColor={props.cardBgColor}
             id={project.id}
             title={project.title}
             details={project.details}
