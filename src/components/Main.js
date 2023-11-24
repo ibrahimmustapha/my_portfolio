@@ -55,8 +55,8 @@ const Main = () => {
         </div>
         <TopDivider topDivColor={theme.dividerColor} />
         <div className={`bg-[${theme.dividerColor}]`} id="Blog">
-          <div className="md:max-w-5xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Blog style={{ background: theme.dividerColor }} bgColor={theme.dividerColor} blogBgColor={theme.bgColor} textColor={theme.textColor}/>
+          <div style={{ background: theme.dividerColor }} className="md:max-w-5xl md:m-auto py-20 md:pt-16 md:pb-10">
+            <Blog bgColor={theme.dividerColor} blogBgColor={theme.bgColor} textColor={theme.textColor}/>
           </div>
         </div>
         <BottomDivider bottomDivColor={theme.dividerColor} />
