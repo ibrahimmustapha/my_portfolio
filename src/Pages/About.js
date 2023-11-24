@@ -1,8 +1,8 @@
 import illustration from "../assets/lust1.svg";
 
-const About = () => {
+const About = (props) => {
   return (
-    <div className="md:w-full md:grid gap-10 md:grid-cols-2 md:grid-flow-col md:justify-between md:items-center px-5 text-center md:text-start">
+    <div style={{ color: props.textColor }} className="md:w-full md:grid gap-10 md:grid-cols-2 md:grid-flow-col md:justify-between md:items-center px-5 text-center md:text-start">
       <img
         className=" w-full rounded-md mb-5 md:rounded-xl justify-center"
         src={illustration}

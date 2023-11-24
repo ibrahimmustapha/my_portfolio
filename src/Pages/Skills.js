@@ -34,9 +34,9 @@ const BackgroundData = [
       "I was awarded a Certificate of Completion for a Udemy Java course",
   },
 ];
-const Skills = () => {
+const Skills = (props) => {
   return (
-    <div className="py-10 px-5">
+    <div style={{ color: props.textColor }} className="py-10 px-5">
       <div className="mb-5 text-xl font-black">SKILLS</div>
       <div className="grid sm:grid-cols-3 md:grid-cols-4 sm:gap-5 md:gap-10">
         {techs.map((tech) => (

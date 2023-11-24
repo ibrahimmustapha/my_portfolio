@@ -7,7 +7,7 @@ const BlogCard = (props) => {
       to={`https://codewithibrahim.hashnode.dev/${props.link}`}
       target="_blank" key={props.postKey}
     >
-      <div className="md:grid md:grid-cols-2 md:gap-8 md:items-start bg-white shadow-xl rounded-2xl md:p-4 p-3 mb-10 cursor-pointer">
+      <div style={{ background: props.blogBg }} className="md:grid md:grid-cols-2 md:gap-8 md:items-start bg-white shadow-xl rounded-2xl md:p-4 p-3 mb-10 cursor-pointer">
         <div>
           <img
             className="rounded-xl mb-4 md:mb-0"

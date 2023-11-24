@@ -1,9 +1,11 @@
 export const lightMode = {
     dividerColor: "#F5F7F8",
-    lightColor: "#FFFFFF"
+    bgColor: "#FFFFFF",
+    textColor: "#000000"
 };
 
 export const darkMode = {
-    dividerColor: "#037456",
-    darkColor: "#212529"
+    dividerColor: "#343a40",
+    bgColor: "#212529",
+    textColor: "#ffffff"
 };

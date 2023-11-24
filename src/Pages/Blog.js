@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import BlogCard from "../components/BlogCard";
 import BlogSkeletonLoader from "../components/BlogSkeletonLoader";
 
-const Blog = () => {
+const Blog = (props) => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
@@ -59,11 +59,12 @@ const Blog = () => {
       </div>
     );
   return (
-    <div className="px-5">
+    <div className="px-5" style={{ color: props.textColor }}>
       <div className="mb-5 text-xl font-black">BLOGS</div>
       <div>
         {posts.map((post) => (
           <BlogCard
+            blogBg={props.blogBgColor}
             postKey={post.node?.slug}
             link={post.node?.url}
             image={post.node.coverImage?.url}

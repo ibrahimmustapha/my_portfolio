@@ -65,7 +65,7 @@ const projectsData = [
 
 const Projects = (props) => {
   return (
-    <div className="md:pb-32 px-5">
+    <div style={{ color: props.textColor }} className="md:pb-32 px-5">
       <div className="mb-5 text-xl font-black">PERSONAL PROJECTS</div>
       <div className="mb-8">
         Real World Projects Showcase - Each Project is Unique
