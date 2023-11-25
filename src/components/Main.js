@@ -50,7 +50,7 @@ const Main = () => {
         <BottomDivider bottomDivColor={theme.dividerColor} />
         <div className="" id="Projects">
           <div className="md:max-w-6xl md:m-auto py-20 md:pt-16 md:pb-10">
-            <Projects textColor={theme.textColor} cardBgColor={theme.textColor} />
+            <Projects textColor={theme.textColor} cardBgColor={theme.projectCardColor} />
           </div>
         </div>
         <TopDivider topDivColor={theme.dividerColor} />
