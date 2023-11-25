@@ -41,9 +41,9 @@ const Navbar = (props) => {
         <li className="nav_link hover:text-yellow-600">
           <button onClick={props.toggleTheme}>
             {props.isDarkMode ? (
-              <img className=" w-7 h-7 text-white" src={sun} alt="sun-light" />
+              <img className=" w-7 h-7 text-white active:animate-spin" src={sun} alt="sun-light" />
             ) : (
-              <img className=" w-7 h-7" src={moon} alt="moon-dark" />
+              <img className=" w-7 h-7 active:animate-spin" src={moon} alt="moon-dark" />
             )}
           </button>
         </li>
