@@ -21,7 +21,7 @@ const Main = () => {
   };
   
   return (
-    <div style={{ color: theme.textColor }}
+    <div style={{ color: theme.textColor, background: theme.bgColor }}
       className={`md:text-lg text-[${theme.textColor}] overflow-hidden block bg-[${theme.bgColor}] scroll-smooth`}
     >
       <div className="max-w-7xl m-auto">
