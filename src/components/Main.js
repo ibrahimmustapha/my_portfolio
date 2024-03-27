@@ -1,11 +1,11 @@
 import { useState } from "react";
-import About from "../Pages/About";
-import Blog from "../Pages/Blog";
-import Contact from "../Pages/Contact";
-import Footer from "../Pages/Footer";
-import Hero from "../Pages/Hero";
-import Projects from "../Pages/Projects";
-import Skills from "../Pages/Skills";
+import About from "../pages/About";
+import Blog from "../pages/Blog";
+import Contact from "../pages/Contact";
+import Footer from "../pages/Footer";
+import Hero from "../pages/Hero";
+import Projects from "../pages/Projects";
+import Skills from "../pages/Skills";
 import { darkMode, lightMode } from "../themes/Theme";
 import BottomDivider from "./BottomDivider";
 import Navbar from "./Nav";
