@@ -2,18 +2,18 @@ import ProjectCard from "../components/ProjectCard";
 import WeatherImage from "../assets/weather-app.png";
 import CovidImage from "../assets/covid-tracker.png";
 import FramamImage from "../assets/framam.jpg";
+import ChickenWords from "../assets/chickenwords.png";
 import TwitterClone from "../assets/twitterclone.png";
 
 const projectsData = [
   {
     id: 1,
-    title: "Linkstor",
+    title: "Chicken Words",
     details:
-      "Linkstor is a web bases application that allows you to store a collection of you personal links and share them at once with your friends and so on.",
-    image:
-      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
-    tech: ["React", "Firebase"],
-    link: "",
+      "Chicken Word is a typing performance webapp that allows user to put their typing skills to test. Chicken words is very easy to use.",
+    image: ChickenWords,
+    tech: ["Html", "CSS", "Javascrips"],
+    link: "https://chickenwords.netlify.app/",
   },
   {
     id: 2,
