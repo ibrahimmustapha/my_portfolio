@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import arrow from "../../src/assets/right-arrow.svg";
-import logo from "../../src/assets/pic5.jpeg";
 import moon from "../../src/assets/icons8-moon-50.png";
 import sun from "../../src/assets/icons8-sun-50.png";
 
