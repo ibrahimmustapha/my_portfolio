@@ -1,17 +1,18 @@
-const BlogSkeletonLoader = () => {
+const BlogSkeletonLoader = ({ surfaceClasses }) => {
   return (
-    <div className="bg-[#212529] shadow-xl rounded-2xl md:p-4 p-3 mb-10 cursor-pointer">
-      <div className="md:grid md:grid-cols-2 md:gap-8 md:items-start animate-pulse">
-        <div className="bg-[#343a40] p-28 rounded-2xl h-full w-full mb-5 md:mb-0"></div>
-        <div>
-          <div className="bg-[#343a40] h-4 md:h-5 w-full rounded-2xl"></div>
-          <div className="md:py-5 py-2">
-            <div className=" bg-[#343a40] h-4 md:h-5 w-10/12 rounded-2xl my-4"></div>
-            <div className=" bg-[#343a40] h-4 md:h-5 w-11/12 rounded-2xl my-4"></div>
-            <div className=" bg-[#343a40] h-4 md:h-5 w-11/12 rounded-2xl my-4"></div>
-          </div>
-          <div className=" bg-[#343a40] h-4 md:h-5 w-32 rounded-2xl"></div>
+    <div
+      className={`${surfaceClasses} relative overflow-hidden border-dashed opacity-80`}
+    >
+      <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-white/20 to-transparent dark:via-white/5" />
+      <div className="relative flex flex-col gap-6">
+        <div className="h-56 w-full rounded-2xl bg-slate-200/70 dark:bg-slate-700/60" />
+        <div className="space-y-4">
+          <div className="h-4 rounded-full bg-slate-200/80 dark:bg-slate-700/60" />
+          <div className="h-4 w-10/12 rounded-full bg-slate-200/70 dark:bg-slate-700/50" />
+          <div className="h-4 w-11/12 rounded-full bg-slate-200/70 dark:bg-slate-700/50" />
+          <div className="h-4 w-8/12 rounded-full bg-slate-200/70 dark:bg-slate-700/50" />
         </div>
+        <div className="h-3 w-28 rounded-full bg-slate-200/70 dark:bg-slate-700/50" />
       </div>
     </div>
   );

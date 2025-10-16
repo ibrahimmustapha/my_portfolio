@@ -5,87 +5,86 @@ import FramamImage from "../assets/framam.jpg";
 import ChickenWords from "../assets/chickenwords.png";
 import TwitterClone from "../assets/twitterclone.png";
 
-const projectsData = [
+const projects = [
   {
     id: 1,
     title: "Chicken Words",
     details:
-      "Chicken Word is a typing performance webapp that allows user to put their typing skills to test. Chicken words is very easy to use.",
+      "A playful typing performance web app that turns practice into a fun challenge with real-time feedback and delightful micro-interactions.",
     image: ChickenWords,
-    tech: ["Html", "CSS", "Javascrips"],
+    tech: ["React", "CSS", "Netlify"],
     link: "https://chickenwords.netlify.app/",
   },
   {
     id: 2,
     title: "Framam Recycling App",
     details:
-      "Framam (mobile-app) is a recycling reward system apps that rewards it users points from tokens that can be converted in the real funds later. ",
+      "A mobile experience that rewards responsible recycling behaviours with token-based incentives and community engagement tools.",
     image: FramamImage,
-    tech: ["React Native", "Firebase"],
+    tech: ["React Native", "Firebase", "Figma"],
     link: "https://www.youtube.com/watch?v=embRIgWbTG4&t=318s",
   },
   {
     id: 3,
-    title: "Weather App",
+    title: "Weather Shortcaster",
     details:
-      "Wee-Shortcaster is a web app that allows you to check the weather conditions and the temperature of various cities across the globe.",
+      "A global weather dashboard for instant forecasts, trend visualisations, and location-based insights at a glance.",
     image: WeatherImage,
-    tech: ["Angular", "Tailwind CSS"],
+    tech: ["Angular", "Tailwind CSS", "OpenWeather"],
     link: "https://shortcaster.netlify.app/",
   },
   {
     id: 4,
     title: "Covid Pro Tracka",
     details:
-      "Covid Pro Tracka is a web based application that showcases the current covid 19 stats of all countries across the globe.",
+      "An interactive tracker highlighting real-time COVID-19 stats and insights from around the world with responsive charts.",
     image: CovidImage,
-    tech: ["Angular", "Tailwind CSS"],
+    tech: ["Angular", "Tailwind CSS", "REST APIs"],
     link: "https://covid-19-tracka.netlify.app",
   },
   {
     id: 5,
-    title: "Todo List",
+    title: "Todo Momentum",
     details:
-      "Seamlessly manage users with SSO and domain capture with SSO and domain capture.",
+      "A minimalist productivity companion that blends daily planning with streak tracking to keep momentum strong.",
     image:
       "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
-    tech: ["Vue", "CSS"],
+    tech: ["Vue", "Firebase", "Tailwind CSS"],
     link: "",
   },
   {
     id: 6,
     title: "TwitterX Clone",
     details:
-      "TwitterX clone is a clone of the twitter webapp. It was built with Reactjs, Firebase and styled with tailwindcss.",
+      "A re-imagined social feed built with real-time updates, authentication, and crisp UI inspired by modern social platforms.",
     image: TwitterClone,
-    tech: ["React", "Firebase"],
+    tech: ["React", "Firebase", "Tailwind CSS"],
     link: "https://twitterxclone.netlify.app/",
   },
 ];
 
-const Projects = (props) => {
+const Projects = ({ surfaceClasses }) => {
   return (
-    <div style={{ color: props.textColor }} className="md:pb-32 px-5">
-      <div className="mb-5 text-xl font-black">PERSONAL PROJECTS</div>
-      <div className="mb-8">
-        Real World Projects Showcase - Each Project is Unique
-      </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 g gap-10">
-        {projectsData.map((project) => (
-          <ProjectCard
-            projectCardBgColor={props.cardBgColor}
-            id={project.id}
-            title={project.title}
-            details={project.details}
-            image={project.image}
-            link={project.link}
-          >
-            {project.tech.map((tech) => (
-              <div className="text-white bg-[#2f2f2f] rounded-lg shadow-lg shadow-black-900 p-1 pl-4 pr-4 hover:animate-pulse">
-                {tech}
-              </div>
-            ))}
-          </ProjectCard>
+    <div className="flex flex-col gap-10">
+      <section className={`${surfaceClasses} relative overflow-hidden`}>
+        <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-br from-brand-primary/15 via-transparent to-transparent blur-3xl opacity-80 dark:from-brand-accent/15" />
+        <div className="relative text-center md:text-left">
+          <span className="text-sm font-semibold uppercase tracking-widest text-brand-primary dark:text-brand-accent">
+            Projects
+          </span>
+          <h2 className="mt-4 text-2xl font-semibold md:text-3xl">
+            Real-world experiments in solving problems with craft and intent.
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base dark:text-slate-300">
+            Each build is an opportunity to learn, iterate, and deliver value.
+            Here’s a selection of recent work spanning web experiences, mobile
+            apps, and experiment-driven prototypes.
+          </p>
+        </div>
+      </section>
+      <div className="grid gap-8 md:grid-cols-2">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} {...project} />
         ))}
       </div>
     </div>
