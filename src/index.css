@@ -5,12 +5,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@&display=swap");
 @import url('https://rsms.me/inter/inter.css');
 
+html,
 body {
+  width: 100%;
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 code {

@@ -6,7 +6,12 @@ const techs = [
   "React",
   "Angular",
   "JavaScript",
+  "Typescript",
   "Java",
+  "Selenium",
+  "Jenkins",
+  "Playwright",
+  "Cypress",
   "Express",
   "MySQL",
   "MongoDB",
@@ -15,6 +20,12 @@ const techs = [
 ];
 
 const educationTimeline = [
+  {
+    title: "QA Automation Engineer, Selenium & Java",
+    date: "2023 – Present",
+    preview:
+      "Own Selenium WebDriver suites in Java, plug them into Jenkins, and champion shift-left testing across the team.",
+  },
   {
     title: "Bachelor of Science in Information Technology Management",
     date: "Dec 2021 – Jul 2023",

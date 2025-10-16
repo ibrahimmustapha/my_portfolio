@@ -10,9 +10,14 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const handleNavClick = (target) => {
     setIsOpen(false);
     const section = document.getElementById(target);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!section) {
+      return;
     }
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (

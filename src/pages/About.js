@@ -10,13 +10,12 @@ const About = ({ surfaceClasses }) => {
             About
           </span>
           <h2 className="mt-4 text-2xl font-semibold md:text-4xl">
-            A Ghana-based software developer who thrives on curiosity.
+            QA automation engineer based in Ghana.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-            From front-end polish to back-end robustness, I approach each
-            project as a chance to craft purposeful products. My journey blends
-            formal education with hands-on experimentation, letting me adapt
-            quickly and deliver solutions that feel as good as they function.
+            I build Selenium + Java suites, plug them into Jenkins, and partner
+            with developers to catch issues early. The same curiosity drives me
+            to craft hands-on product features that still feel polished.
           </p>
           <div className="mt-8 grid gap-4 text-left text-sm text-slate-500 dark:text-slate-300 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-200/40 bg-white/50 p-4 dark:border-slate-700/60 dark:bg-slate-900/60">
@@ -24,8 +23,8 @@ const About = ({ surfaceClasses }) => {
                 How I work
               </p>
               <p className="mt-2 leading-relaxed">
-                I iterate fast, collaborate openly, and sweat the interactions
-                that delight users.
+                I iterate quickly, stay close to the team, and design automation
+                that protects the customer experience without slowing delivery.
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200/40 bg-white/50 p-4 dark:border-slate-700/60 dark:bg-slate-900/60">
@@ -33,8 +32,8 @@ const About = ({ surfaceClasses }) => {
                 Focus areas
               </p>
               <p className="mt-2 leading-relaxed">
-                Design systems, full-stack apps, and high-performing interfaces
-                grounded in accessibility.
+                Test architecture, CI/CD quality gates, and user-centred apps
+                that balance sharp UX with maintainable engineering.
               </p>
             </div>
           </div>

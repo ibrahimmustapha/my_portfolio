@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import image from "../assets/safari-pinned-tab.svg";
+import profileImage from "../assets/baba.jpg";
 import {
   faDiscord,
   faGithub,
@@ -46,16 +46,15 @@ const Hero = ({ surfaceClasses }) => {
         <div className="relative">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-primary/30 bg-brand-primary/10 px-4 py-1 text-sm font-semibold text-brand-primary dark:border-brand-accent/40 dark:bg-brand-accent/10 dark:text-brand-accent">
             <span className="h-2 w-2 rounded-full bg-brand-primary dark:bg-brand-accent" />
-            Crafting user-first digital experiences
+            QA automation & product craftsmanship
           </span>
           <h1 className="mt-6 text-3xl font-semibold leading-tight md:text-5xl md:leading-[1.1]">
-            Hi, I'm Ibrahim — a software developer focused on building polished,
-            performant products.
+            Hi, I'm Ibrahim — a QA automation engineer & software developer.
           </h1>
           <p className="mt-6 text-base text-slate-600 md:text-lg dark:text-slate-300">
-            I bring ideas to life with delightful interfaces, resilient systems,
-            and a collaborative mindset. From concept to launch, I care about the
-            details that create memorable experiences.
+            I ship dependable releases with Selenium + Java suites wired into
+            Jenkins, while partnering with teams to keep the product feel sharp
+            end to end.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <button
@@ -93,24 +92,27 @@ const Hero = ({ surfaceClasses }) => {
         </div>
       </div>
       <div className="relative mx-auto flex items-center justify-center">
-        <div className={`${surfaceClasses} relative flex w-full max-w-sm flex-col items-center gap-6 overflow-hidden text-center`}>
+        <div
+          className={`${surfaceClasses} relative flex w-full max-w-md flex-col items-center gap-8 overflow-hidden text-center`}
+        >
           <div className="absolute inset-0 bg-hero-light transition-colors duration-300 dark:bg-hero-dark" />
-          <div className="relative mt-6 flex h-28 w-28 items-center justify-center rounded-3xl bg-white/40 shadow-inner shadow-white/40 backdrop-blur dark:bg-slate-900/40">
+          <div className="relative mt-8 flex h-48 w-48 items-center justify-center rounded-[2.75rem] bg-white/25 shadow-inner shadow-white/50 backdrop-blur-sm dark:bg-slate-900/40">
+            <div className="absolute inset-0 rounded-[2.75rem] border border-white/60 shadow-[0_20px_60px_-25px_rgba(15,23,42,0.45)] dark:border-white/10 dark:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.65)]" />
             <img
-              src={image}
-              alt="Ibrahim Mustapha avatar"
-              className="h-20 w-20 animate-float drop-shadow-md"
+              src={profileImage}
+              alt="Ibrahim Mustapha portrait"
+              className="relative z-10 h-44 w-44 animate-float rounded-[2.25rem] object-cover"
             />
           </div>
-          <div className="relative px-6 pb-8">
+          <div className="relative px-6 pb-10">
             <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
               Currently
             </p>
             <h2 className="mt-2 text-xl font-semibold text-slate-800 dark:text-slate-100">
-              Building full-stack experiences
+              QA automation engineer
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-              React · Angular · Node.js · Firebase · Tailwind CSS
+              Selenium · Java · Playwright · Typescript
             </p>
           </div>
         </div>
