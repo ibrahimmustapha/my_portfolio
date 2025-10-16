@@ -40,30 +40,50 @@ const Main = () => {
   );
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-800 transition-colors duration-500 ease-out dark:bg-slate-950 dark:text-slate-100">
+    <div className="relative flex min-h-screen flex-col overflow-hidden bg-slate-50 text-slate-800 transition-colors duration-500 ease-out dark:bg-slate-950 dark:text-slate-100">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-32 -left-28 h-72 w-72 rounded-full bg-brand-primary/20 blur-3xl dark:bg-brand-secondary/25" />
         <div className="absolute top-1/3 -right-24 hidden h-80 w-80 rounded-full bg-brand-accent/20 blur-3xl md:block dark:bg-brand-primary/30" />
         <div className="absolute bottom-[-8rem] left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand-secondary/10 blur-3xl dark:bg-brand-accent/15" />
       </div>
       <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <main className="relative mx-auto flex max-w-6xl flex-col gap-24 px-6 pb-24 pt-32 md:px-10 lg:px-0">
-        <section id="Home" className="animate-fadeUp">
+      <main className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col gap-24 px-6 pb-24 pt-32 md:px-10 lg:px-0">
+        <section id="Home" className="animate-fadeUp scroll-mt-32 md:scroll-mt-40">
           <Hero surfaceClasses={surfaceClasses} />
         </section>
-        <section id="About" className="animate-fadeUp" style={{ animationDelay: "0.1s" }}>
+        <section
+          id="About"
+          className="animate-fadeUp scroll-mt-32 md:scroll-mt-40"
+          style={{ animationDelay: "0.1s" }}
+        >
           <About surfaceClasses={surfaceClasses} />
         </section>
-        <section id="Skills" className="animate-fadeUp" style={{ animationDelay: "0.2s" }}>
+        <section
+          id="Skills"
+          className="animate-fadeUp scroll-mt-32 md:scroll-mt-40"
+          style={{ animationDelay: "0.2s" }}
+        >
           <Skills surfaceClasses={surfaceClasses} />
         </section>
-        <section id="Projects" className="animate-fadeUp" style={{ animationDelay: "0.3s" }}>
+        <section
+          id="Projects"
+          className="animate-fadeUp scroll-mt-32 md:scroll-mt-40"
+          style={{ animationDelay: "0.3s" }}
+        >
           <Projects surfaceClasses={surfaceClasses} />
         </section>
-        <section id="Blog" className="animate-fadeUp" style={{ animationDelay: "0.4s" }}>
+        <section
+          id="Blog"
+          className="animate-fadeUp scroll-mt-32 md:scroll-mt-40"
+          style={{ animationDelay: "0.4s" }}
+        >
           <Blog surfaceClasses={surfaceClasses} />
         </section>
-        <section id="Contact" className="animate-fadeUp" style={{ animationDelay: "0.5s" }}>
+        <section
+          id="Contact"
+          className="animate-fadeUp scroll-mt-32 md:scroll-mt-40"
+          style={{ animationDelay: "0.5s" }}
+        >
           <Contact surfaceClasses={surfaceClasses} />
         </section>
       </main>
