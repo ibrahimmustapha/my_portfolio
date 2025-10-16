@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import moon from "../../src/assets/icons8-moon-50.png";
 import sun from "../../src/assets/icons8-sun-50.png";
 
 const links = ["Home", "About", "Skills", "Projects", "Blog", "Contact"];
 
-const Navbar = ({ toggleTheme, isDarkMode }) => {
+const Navbar = forwardRef(({ toggleTheme, isDarkMode }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleNavClick = (target) => {
@@ -21,7 +21,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header ref={ref} className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-6xl px-6 pt-6 md:px-10 lg:px-0">
         <div className="flex items-center justify-between rounded-full border border-slate-200/60 bg-white/70 px-5 py-3 shadow-lg shadow-slate-900/5 backdrop-blur-lg transition-colors duration-300 dark:border-slate-700/60 dark:bg-slate-900/70 dark:shadow-black/40">
           <button
@@ -109,6 +109,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       </div>
     </header>
   );
-};
+});
+
+Navbar.displayName = "Navbar";
 
 export default Navbar;
