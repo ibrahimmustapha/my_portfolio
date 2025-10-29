@@ -4,6 +4,7 @@ import CovidImage from "../assets/covid-tracker.png";
 import FramamImage from "../assets/framam.jpg";
 import ChickenWords from "../assets/chickenwords.png";
 import TwitterClone from "../assets/twitterclone.png";
+import TravelAgency from "../assets/travel-agency.png";
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Weather Shortcaster",
+    title: "Aurora Weather",
     details:
       "A global weather dashboard for instant forecasts, trend visualisations, and location-based insights at a glance.",
     image: WeatherImage,
@@ -44,13 +45,12 @@ const projects = [
   },
   {
     id: 5,
-    title: "Todo Momentum",
+    title: "Travel Agency Landing Page",
     details:
-      "A minimalist productivity companion that blends daily planning with streak tracking to keep momentum strong.",
-    image:
-      "https://i.graphicmama.com/blog/wp-content/uploads/2020/07/23143645/17-Inspiring-Ui-Ux-Designer-Portfolios-That-Take-Design-to-the-Next-Level.jpg",
+      "We orchestrate every touchpoint—from vision workshops to on-the-ground execution—so your travelers can focus on connection, innovation, and discovery.",
+    image: TravelAgency,
     tech: ["Vue", "Firebase", "Tailwind CSS"],
-    link: "",
+    link: "https://shaibstravel.netlify.app/",
   },
   {
     id: 6,
@@ -58,7 +58,7 @@ const projects = [
     details:
       "A re-imagined social feed built with real-time updates, authentication, and crisp UI inspired by modern social platforms.",
     image: TwitterClone,
-    tech: ["React", "Firebase", "Tailwind CSS"],
+    tech: ["React", "JavaScript", "Tailwind CSS"],
     link: "https://twitterxclone.netlify.app/",
   },
 ];

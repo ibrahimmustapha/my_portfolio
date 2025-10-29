@@ -4,7 +4,7 @@ import sun from "../../src/assets/icons8-sun-50.png";
 
 const links = ["Home", "About", "Skills", "Projects", "Blog", "Contact"];
 
-const Navbar = forwardRef(({ toggleTheme, isDarkMode }, ref) => {
+const Navbar = forwardRef(({ toggleTheme, isDarkMode, activeSection, onSectionSelect }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleNavClick = (target) => {
@@ -12,6 +12,10 @@ const Navbar = forwardRef(({ toggleTheme, isDarkMode }, ref) => {
     const section = document.getElementById(target);
     if (!section) {
       return;
+    }
+
+    if (onSectionSelect) {
+      onSectionSelect(target);
     }
 
     section.scrollIntoView({
@@ -35,15 +39,23 @@ const Navbar = forwardRef(({ toggleTheme, isDarkMode }, ref) => {
             <span className="hidden sm:inline">Portfolio</span>
           </button>
           <nav className="hidden items-center gap-7 text-sm font-medium md:flex">
-            {links.map((link) => (
-              <button
-                key={link}
-                onClick={() => handleNavClick(link)}
-                className="text-slate-600 transition-colors duration-200 hover:text-brand-primary focus:text-brand-primary focus:outline-none dark:text-slate-300 dark:hover:text-brand-accent"
-              >
-                {link}
-              </button>
-            ))}
+            {links.map((link) => {
+              const isActive = activeSection === link;
+              return (
+                <button
+                  key={link}
+                  onClick={() => handleNavClick(link)}
+                  className={`relative text-slate-600 transition-colors duration-200 hover:text-brand-primary focus:text-brand-primary focus:outline-none dark:text-slate-300 dark:hover:text-brand-accent ${
+                    isActive ? "text-brand-primary dark:text-brand-accent" : ""
+                  }`}
+                >
+                  {link}
+                  {isActive && (
+                    <span className="absolute inset-x-0 -bottom-2 mx-auto h-1 w-8 rounded-full bg-brand-primary/70 dark:bg-brand-accent/70" />
+                  )}
+                </button>
+              );
+            })}
             <button
               onClick={toggleTheme}
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-transparent bg-slate-100 transition hover:-translate-y-0.5 hover:border-brand-primary/30 hover:bg-white hover:shadow-lg hover:shadow-brand-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/40 dark:bg-slate-800 dark:hover:bg-slate-700"
@@ -94,15 +106,22 @@ const Navbar = forwardRef(({ toggleTheme, isDarkMode }, ref) => {
         {isOpen && (
           <div className="mt-3 rounded-3xl border border-slate-200/60 bg-white/90 p-6 shadow-lg shadow-slate-900/5 backdrop-blur-lg md:hidden dark:border-slate-700/60 dark:bg-slate-900/90 dark:shadow-black/40">
             <nav className="flex flex-col gap-4 text-base font-medium">
-              {links.map((link) => (
-                <button
-                  key={link}
-                  onClick={() => handleNavClick(link)}
-                  className="rounded-full px-4 py-2 text-left text-slate-700 transition hover:bg-brand-primary/10 hover:text-brand-primary dark:text-slate-200 dark:hover:bg-brand-primary/20 dark:hover:text-brand-accent"
-                >
-                  {link}
-                </button>
-              ))}
+              {links.map((link) => {
+                const isActive = activeSection === link;
+                return (
+                  <button
+                    key={link}
+                    onClick={() => handleNavClick(link)}
+                    className={`rounded-full px-4 py-2 text-left transition hover:bg-brand-primary/10 hover:text-brand-primary dark:hover:bg-brand-primary/20 dark:hover:text-brand-accent ${
+                      isActive
+                        ? "bg-brand-primary/10 text-brand-primary dark:bg-brand-primary/20 dark:text-brand-accent"
+                        : "text-slate-700 dark:text-slate-200"
+                    }`}
+                  >
+                    {link}
+                  </button>
+                );
+              })}
             </nav>
           </div>
         )}
